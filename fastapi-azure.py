@@ -81,7 +81,7 @@ async def azureCli(cmd: str, background_tasks: BackgroundTasks):
 
 @app.get("/ping")
 async def ping():
-    return {"ping": "pong"}
+    return {"message": "pong!"}
 
 if __name__ == "__main__":
     uvicorn.run("fastapi-azure:app", host="0.0.0.0",port=5000, log_level="info" , reload=True)
