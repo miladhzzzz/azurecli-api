@@ -1,6 +1,6 @@
 from executor import execute
 from az.cli import az as azure
-import hug ,uuid , datetime ,requests , sys, jwt, json
+import hug , requests , json
 
 
 class myServer():
@@ -45,7 +45,7 @@ class myServer():
         }
         return heartbeat
     
-    @hug.object.get("/azure/{command}")
+    @hug.object.get("/api/v1/azure/{command}")
     async def azureCli(Self, command):
 
         Self.azureCmd(command)

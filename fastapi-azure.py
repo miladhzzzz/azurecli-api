@@ -1,6 +1,6 @@
 import asyncio, json, http, uuid, sentry_sdk, uvicorn
 from fastapi import FastAPI, BackgroundTasks, Request, Response
-from pydantic import BaseModel, StrictStr
+from pydantic import BaseModel
 from az.cli import az as azure
 
     
