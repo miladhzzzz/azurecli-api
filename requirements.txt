@@ -2,3 +2,4 @@ sentry_sdk
 uvicorn
 fastapi
 pydantic
+az.cli
