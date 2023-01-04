@@ -64,14 +64,14 @@ async def startup_event():
 
 @app.on_event("shutdown")
 async def shutdown_event():
-    print("hello")
+    print("bye")
 
 
 # >>>>>>>>>>>ACTUAL END POINTS <<<<<<<<<<<<<<<
 
 @app.get("/api/v1/azure/{command}")
 async def azureCli(cmd: str, background_tasks: BackgroundTasks):
-   res = azureCmd(cmd)
+   res = await azureCmd(cmd)
    background_tasks.add_task(location)
    
    return res
