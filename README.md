@@ -3,6 +3,8 @@
 <br>
 dead simple HTTP-REST-API written in python using FASTAPI to execute commands on azure cli without leaving the browser.
 <br>
+**this project uses sentry for monitoring be sure to change the accesskey**
+<br>
 swagger at "http://your-ip-address:5000/docs"
 <br>
 get endpoint is "http://your-ip-address:5000/api/v1/azure/{command}"
