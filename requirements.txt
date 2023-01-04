@@ -1,0 +1,4 @@
+sentry_sdk
+uvicorn
+fastapi
+pydantic
