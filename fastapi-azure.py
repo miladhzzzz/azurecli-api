@@ -69,6 +69,11 @@ async def shutdown_event():
 
 # >>>>>>>>>>>ACTUAL END POINTS <<<<<<<<<<<<<<<
 
+@app.get("/api/v1/azure/login")
+async def azureLogin():
+    res = azureCmd("login")
+    return res
+
 @app.get("/api/v1/azure/{command}")
 async def azureCli(cmd: str, background_tasks: BackgroundTasks):
    res = await azureCmd(cmd)
