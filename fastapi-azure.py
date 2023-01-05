@@ -76,8 +76,8 @@ async def azureLogin():
     return res
 
 @app.get("/api/v1/azure/{command}")
-async def azureCli(cmd: str, background_tasks: BackgroundTasks):
-   res = await azureCmd(cmd)
+async def azureCli(command: str, background_tasks: BackgroundTasks):
+   res = await azureCmd(command)
    background_tasks.add_task(location)
    
    return res.azureResponse
