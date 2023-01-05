@@ -16,5 +16,6 @@ dead simple HTTP-REST-API written in python using FASTAPI to execute commands on
 <br>
 have fun!
 <br>
+
 # azurecli-hug hug
 this is the same thing but i used hug instead of fastapi
