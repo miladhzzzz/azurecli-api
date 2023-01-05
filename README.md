@@ -14,7 +14,7 @@ dead simple HTTP-REST-API written in python using FASTAPI to execute commands on
 * swagger at "http://your-ip-address:5000/docs".
 * login to azure "http://your-ip-address:5000/api/v1/azure/login".
 * send a get request to "http://your-ip-address:5000/api/v1/azure/{command}" command is what ever you want to execute, cli example would be "az {command}" running on your os command line.
-* **you can also deploy this as a docker container using "docker build -t" . after cloning repository**
+* **you can also deploy this as a docker container using "docker build -t ." after cloning repository**
   <br>
   <br>
   have fun!
