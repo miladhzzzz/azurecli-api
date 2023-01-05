@@ -82,6 +82,11 @@ async def azureCli(command: str, background_tasks: BackgroundTasks):
    
    return res.azureResponse
 
+# !! call this only on linux based machines like from inside a container that has terraform/az cli/docker/ etc... isntalled!
+@app.get("/api/v1/checkEnv")
+async def check():
+    res = await performChecks()
+    return res
 
 # >>>>>>>>>>>>>> TESTS <<<<<<<<<<<<<<<<
 
