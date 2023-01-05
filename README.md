@@ -12,6 +12,7 @@ login to azure "http://your-ip-address:5000/api/v1/azure/login"
 <br>
 send a get request to "http://your-ip-address:5000/api/v1/azure/{command}" command is what ever you want to execute, cli example would be "az {command}" running on your os command line.
 <br>
+**you can also deploy this as a docker container using "docker build -t" . after cloning repository**
 have fun!
 <br>
 # azurecli-hug hug
