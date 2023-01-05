@@ -2,7 +2,7 @@ import asyncio, json, requests, sentry_sdk, uvicorn
 from fastapi import FastAPI, BackgroundTasks, Request, Response
 from pydantic import BaseModel
 from az.cli import az as azure
-
+from executor import execute
     
 
 sentry_sdk.init(
@@ -60,7 +60,8 @@ async def location():
 
 @app.on_event("startup")
 async def startup_event():
-    performChecks()
+    #performChecks()
+    print("h")
 
 @app.on_event("shutdown")
 async def shutdown_event():
@@ -71,7 +72,7 @@ async def shutdown_event():
 
 @app.get("/api/v1/azure/login")
 async def azureLogin():
-    res = azureCmd("login")
+    res = await azureCmd("login")
     return res
 
 @app.get("/api/v1/azure/{command}")
@@ -79,7 +80,7 @@ async def azureCli(cmd: str, background_tasks: BackgroundTasks):
    res = await azureCmd(cmd)
    background_tasks.add_task(location)
    
-   return res
+   return res.azureResponse
 
 
 # >>>>>>>>>>>>>> TESTS <<<<<<<<<<<<<<<<
