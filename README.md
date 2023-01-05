@@ -5,9 +5,12 @@ dead simple HTTP-REST-API written in python using FASTAPI to execute commands on
 <br>
 **this project uses sentry for monitoring be sure to change the accesskey**
 <br>
+**Usage**
 swagger at "http://your-ip-address:5000/docs"
 <br>
-get endpoint is "http://your-ip-address:5000/api/v1/azure/{command}"
+login to azure "http://your-ip-address:5000/api/v1/azure/login"
+<br>
+send a get request to "http://your-ip-address:5000/api/v1/azure/{command}" command is what ever you want to execute, cli example would be "az {command}" running on your os command line.
 <br>
 have fun!
 <br>
