@@ -49,7 +49,7 @@ async def performChecks():
           "status": 'ok'
      }
     return passed
-                 
+# because we live in iran i wrote this so i can break before accessing azure if my ip address is from iran!                 
 async def location():
     try:
         response = requests.get('https://ipapi.co/json/').json()
